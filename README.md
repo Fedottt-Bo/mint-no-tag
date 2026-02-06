@@ -16,11 +16,11 @@ Examples:
 
 ## Usage
 
-This section assumes that you are on Windows and is using the steam version of DRG, working with
-either local `.pak`s or mod.io mods.
+This section assumes that you are on Windows and using the steam version of DRG,
+working with either local `.pak`s or mod.io mods.
 
 First, download the [latest release](https://github.com/Fedottt-Bo/mint-no-tag/releases/latest)
-compatible with your architecture. For windows, this will be the `mint-no-tag.exe`. Extract
-this to anywhere you'd like to keep the executable.
+and choose the desired variant:
+- `mint.no-tag.exe` with only server name tag removed.
 
 Use original repository for the complete guide with illustrations.
