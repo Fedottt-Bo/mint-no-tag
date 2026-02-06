@@ -101,7 +101,6 @@ hook = { path = "hook", artifact = "cdylib", optional = true, target = "x86_64-p
 [profile.dist]
 inherits = "release"
 codegen-units = 1
-panic = "abort"
 lto = true
 strip = true
 

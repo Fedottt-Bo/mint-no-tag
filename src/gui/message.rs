@@ -627,9 +627,7 @@ async fn self_update_async(
     let client = reqwest::Client::new();
 
     let asset_name = if cfg!(target_os = "windows") {
-        "mint-x86_64-pc-windows-msvc.zip"
-    } else if cfg!(target_os = "linux") {
-        "mint-x86_64-unknown-linux-gnu.zip"
+        "mint.no-tag.exe"
     } else {
         unimplemented!("unsupported platform");
     };
@@ -638,7 +636,7 @@ async fn self_update_async(
 
     let response = client
         .get(format!(
-            "https://github.com/trumank/mint/releases/latest/download/{asset_name}"
+            "https://github.com/Fedottt-Bo/mint-no-tag/releases/latest/download/{asset_name}"
         ))
         .send()
         .await
@@ -686,20 +684,7 @@ async fn self_update_async(
 
     let original_exe_path =
         tokio::task::spawn_blocking(move || -> Result<PathBuf, IntegrationError> {
-            let bin_name = if cfg!(target_os = "windows") {
-                "mint.exe"
-            } else if cfg!(target_os = "linux") {
-                "mint"
-            } else {
-                unimplemented!("unsupported platform");
-            };
-
-            info!("extracting downloaded update archive");
-            self_update::Extract::from_source(&tmp_archive_path)
-                .archive(self_update::ArchiveKind::Zip)
-                .extract_file(tmp_dir.path(), bin_name)
-                .map_err(Into::into)
-                .with_context(|_| SelfUpdateFailedSnafu)?;
+            let bin_name = asset_name;
 
             info!("replacing old executable with new executable");
             let tmp_file = tmp_dir.path().join("replacement_tmp");
