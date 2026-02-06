@@ -21,6 +21,8 @@ working with either local `.pak`s or mod.io mods.
 
 First, download the [latest release](https://github.com/Fedottt-Bo/mint-no-tag/releases/latest)
 and choose the desired variant:
-- `mint.no-tag.exe` with only server name tag removed.
+- `mint_no-tag.exe` with just server name tag removed.
+
+Be aware that this version adds changes MODDING tab in the game menu.
 
 Use original repository for the complete guide with illustrations.

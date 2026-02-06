@@ -627,7 +627,7 @@ async fn self_update_async(
     let client = reqwest::Client::new();
 
     let asset_name = if cfg!(target_os = "windows") {
-        "mint.no-tag.exe"
+        "mint_no-tag.exe"
     } else {
         unimplemented!("unsupported platform");
     };

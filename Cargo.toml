@@ -6,8 +6,8 @@ members = [
 ]
 
 [workspace.package]
-repository = "https://github.com/trumank/mint"
-authors = ["trumank", "jieyouxu"]
+repository = "https://github.com/Fedottt-Bo/mint-no-tag"
+authors = ["trumank", "jieyouxu", "Fedottt-Bo"]
 license = "MIT OR Apache-2.0"
 version = "1.0.1"
 edition = "2024"
@@ -36,6 +36,10 @@ authors.workspace = true
 license.workspace = true
 version.workspace = true
 edition.workspace = true
+
+[[bin]]
+name = "mint_no-tag"
+path = "src/main.rs"
 
 [features]
 default = ["hook"]
