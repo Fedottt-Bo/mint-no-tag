@@ -2413,7 +2413,7 @@ dependencies = [
 
 [[package]]
 name = "hook"
-version = "1.0.1"
+version = "1.1.0"
 dependencies = [
  "anyhow",
  "bitflags 2.9.3",
@@ -2436,7 +2436,7 @@ dependencies = [
 
 [[package]]
 name = "hook_resolvers"
-version = "1.0.1"
+version = "1.1.0"
 dependencies = [
  "patternsleuth",
  "serde",
@@ -3305,7 +3305,7 @@ dependencies = [
 
 [[package]]
 name = "mint"
-version = "1.0.1"
+version = "1.1.0"
 dependencies = [
  "ansi_term",
  "anyhow",
@@ -3363,7 +3363,7 @@ dependencies = [
 
 [[package]]
 name = "mint_lib"
-version = "1.0.1"
+version = "1.1.0"
 dependencies = [
  "anyhow",
  "built",
@@ -7283,7 +7283,7 @@ dependencies = [
 
 [[package]]
 name = "workspace_hack"
-version = "1.0.1"
+version = "1.1.0"
 dependencies = [
  "repak",
 ]
