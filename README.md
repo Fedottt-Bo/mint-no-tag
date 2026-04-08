@@ -5,7 +5,9 @@ externally of the game. This enables more stable mod usage as well as offline mo
 both Steam and Microsoft Store versions.
 
 Original repository: [mint by trumank](https://github.com/trumank/mint).
-Use it to report any issues not related to tagging.
+
+When reporting any issues, look up existing similar ones in the original repo. Right now my only goals
+are: keep updated dependencies, remove tagging and enable/tweak some minor already existing features.
 
 Mods are added via URL to a .pak or .zip containing a .pak. Mods can also be pulled from mod.io.
 Examples:
