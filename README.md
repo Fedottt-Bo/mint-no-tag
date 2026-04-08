@@ -20,6 +20,10 @@ Examples:
  - `https://example.org/some-online-mod-repository/public-mod.pak`
  - `https://mod.io/g/drg/m/sandbox-utilities`
 
+For storing local mods more efficiently you can use 7-Zip:
+- Compatible with orig. mint: `7z a -tzip -mx=9 -m0=Deflate:fb=258:pass=15 -mmt=off mod.zip mod.pak`
+- Stronger **and** faster compression: `7z a -tzip -mx=9 -m0=LZMA:fb=273:md=1g:mf=bt4 -mmt=off mod.zip mod.pak`
+
 ## Usage
 
 This section assumes that you are on Windows and using the steam version of DRG,
