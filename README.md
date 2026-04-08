@@ -6,6 +6,8 @@ both Steam and Microsoft Store versions.
 
 Original repository: [mint by trumank](https://github.com/trumank/mint).
 
+Alternative [mint-notag by Strappazzon](https://github.com/Strappazzon/drg-mint-notag).
+
 When reporting any issues, look up existing similar ones in the original repo first. Right now my only goals
 are:
 - Maintain more or less updated dependencies.
@@ -22,7 +24,13 @@ Examples:
 
 For storing local mods more efficiently you can use 7-Zip:
 - Compatible with orig. mint: `7z a -tzip -mx=9 -m0=Deflate:fb=258:pass=15 -mmt=off mod.zip mod.pak`
-- Stronger **and** faster compression: `7z a -tzip -mx=9 -m0=LZMA:fb=273:md=1g:mf=bt4 -mmt=off mod.zip mod.pak`
+- Stronger **and** faster compression: `7z a -tzip -mx=9 -m0=LZMA:a=1:d=1g:mf=bt4:fb=273:mc=10000:lc=4 -mmt=off mod.zip mod.pak`
+
+Compression strength compared:
+- 31 pak files for total 43.1 MB
+- 13.8 MB via Windows transparent NTFS compression (+211%).
+- 4.23 MB via first command (+918% / +227%).
+- 3.52 MB via second command (+1125% / +293% / +20%).
 
 ## Usage
 
@@ -45,3 +53,9 @@ To build the latest version, install LLVM support in Visual Studio,
 download LLVM either manually or in Visual Studio and add it's `bin` to path.
 
 Clang usage is set by `.cargo/config.toml`, you can also change target CPU there.
+
+Last built with:
+- rustc `1.96.0-nightly (c75612477 2026-04-07)`
+- cargo `1.96.0-nightly (a357df4c2 2026-04-03)`
+- Visual Studio 2026 `18.4.2`
+- llvm `22.1.2`
