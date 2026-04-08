@@ -1,2 +1,8 @@
+[target.x86_64-pc-windows-msvc]
+linker = "lld-link"
+
+[env]
+CC = "clang-cl"
+
 [unstable]
 bindeps = true
