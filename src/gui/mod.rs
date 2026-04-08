@@ -2094,6 +2094,11 @@ impl eframe::App for App {
                                 self.focus_search = true;
                             }
                         }
+                        egui::Event::Key { key, modifiers, pressed, .. } => {
+                            if key == &egui::Key::Q && *pressed && modifiers.ctrl {
+                                std::process::exit(0);
+                            }
+                        }
                         _ => {}
                     }
                 }
