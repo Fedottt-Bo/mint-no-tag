@@ -8,10 +8,9 @@ edition.workspace = true
 
 [features]
 default = []
-oodle_platform_dependent = ["dep:repak"]
 
 [target.'cfg(any(target_os = "windows", target_os = "linux"))'.dependencies]
-repak = { workspace = true, optional = true, features = [ "compression", "encryption", "oodle" ] }
+repak = { workspace = true, features = [ "compression", "encryption", "oodle" ] }
 
 [target.'cfg(not(any(target_os = "windows", target_os = "linux")))'.dependencies]
-repak = { workspace = true, optional = true }
+repak = { workspace = true }

@@ -12,25 +12,25 @@ crate-type = ["cdylib"]
 
 [dependencies]
 anyhow.workspace = true
+bitflags = "2.9.3"
+fs-err.workspace = true
+hook_resolvers = { path = "../hook_resolvers" }
+mint_lib = { path = "../mint_lib" }
+patternsleuth = { workspace = true, features = ["process-internal", "image-pe"] }
+postcard.workspace = true
+proxy_dll = { git = "https://github.com/trumank/proxy_dll.git" }
 repak.workspace = true
+retour = { git = "https://github.com/Hpmason/retour-rs", features = ["static-detour"] }
 serde.workspace = true
 serde_json.workspace = true
-postcard.workspace = true
-fs-err.workspace = true
+tokio = { workspace = true, features = ["full"] }
+tracing-appender = "0.2.3"
 tracing.workspace = true
-patternsleuth = { workspace = true, features = ["process-internal", "image-pe"] }
-retour = { git = "https://github.com/Hpmason/retour-rs", features = ["static-detour"] }
-hook_resolvers = { path = "../hook_resolvers" }
-windows = { version = "0.61.3", features = [
+widestring = "1.2.0"
+windows = { version = "0.62.2", features = [
   "Win32_Foundation",
   "Win32_System_SystemServices",
   "Win32_System_LibraryLoader",
   "Win32_System_Memory",
   "Win32_System_Threading",
 ] }
-mint_lib = { path = "../mint_lib" }
-bitflags = "2.9.3"
-widestring = "1.2.0"
-tokio = { workspace = true, features = ["full"] }
-tracing-appender = "0.2.3"
-proxy_dll = { git = "https://github.com/trumank/proxy_dll.git" }

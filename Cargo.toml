@@ -10,7 +10,7 @@ members = [
 repository = "https://github.com/Fedottt-Bo/mint-no-tag"
 authors = ["trumank", "jieyouxu", "Fedottt-Bo"]
 license = "MIT OR Apache-2.0"
-version = "1.1.0"
+version = "1.2.1"
 edition = "2024"
 
 [workspace.dependencies]
@@ -43,9 +43,8 @@ name = "mint_no-tag"
 path = "src/main.rs"
 
 [features]
-default = ["hook", "oodle_platform_dependent"]
+default = ["hook"]
 hook = ["dep:hook"]
-oodle_platform_dependent = ["workspace_hack/oodle_platform_dependent"]
 
 [dependencies]
 ansi_term = "0.12.1"
