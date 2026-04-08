@@ -6,8 +6,12 @@ both Steam and Microsoft Store versions.
 
 Original repository: [mint by trumank](https://github.com/trumank/mint).
 
-When reporting any issues, look up existing similar ones in the original repo. Right now my only goals
-are: keep updated dependencies, remove tagging and enable/tweak some minor already existing features.
+When reporting any issues, look up existing similar ones in the original repo first. Right now my only goals
+are:
+- Maintain more or less updated dependencies.
+- Remove tagging.
+- Enable/tweak some minor already existing features.
+- Compile distributed binary with stronger optimization.
 
 Mods are added via URL to a .pak or .zip containing a .pak. Mods can also be pulled from mod.io.
 Examples:
@@ -25,6 +29,15 @@ First, download the [latest release](https://github.com/Fedottt-Bo/mint-no-tag/r
 and choose the desired variant:
 - `mint_no-tag.exe` with just server name tag removed.
 
-Be aware that this version adds changes MODDING tab in the game menu.
+Be aware - this version changes MODDING tab in the game menu.
 
 Use original repository for the complete guide with illustrations.
+
+## Building
+
+I only plan supporting native Windows target (msvc).
+
+To build the latest version, install LLVM support in Visual Studio,
+download LLVM either manually or in Visual Studio and add it's `bin` to path.
+
+Clang usage is set by `.cargo/config.toml`, you can also change target CPU there.
