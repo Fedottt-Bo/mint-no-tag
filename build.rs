@@ -12,10 +12,11 @@ fn main() {
     std::fs::copy(&hook_dll, &compressed).unwrap();
 
     let status = Command::new("upx")
-        .args(match std::env::var("PROFILE").unwrap().as_str() {
-            "release" => &["--ultra-brute", "--best"],
-            _ => &["--lzma", "-1"],
+        .args(&match std::env::var("PROFILE").unwrap().as_str() {
+            "release" => ["--ultra-brute", "--lzma", "--best"].to_vec(),
+            _ => ["--no-lzma", "-1"].to_vec(),
         })
+        .arg("-k")
         .arg(compressed.to_str().unwrap())
         .status().unwrap();
 
