@@ -102,9 +102,9 @@ zip = { version = "8.5.1", default-features = false, features = [
   "bzip2", "zstd", "lzma", "xz", "ppmd"
 ] }
 
-[target.'cfg(target_env = "msvc")'.dependencies]
+[target.'cfg(target_env = "msvc")'.build-dependencies]
 hook = { path = "hook", artifact = "cdylib", optional = true, target = "x86_64-pc-windows-msvc"}
-[target.'cfg(not(target_env = "msvc"))'.dependencies]
+[target.'cfg(not(target_env = "msvc"))'.build-dependencies]
 hook = { path = "hook", artifact = "cdylib", optional = true, target = "x86_64-pc-windows-gnu"}
 
 [profile.dist]

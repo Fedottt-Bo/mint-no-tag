@@ -312,7 +312,7 @@ pub fn integrate<P: AsRef<Path>>(
         let path_hook_dll = installation
             .binaries_directory()
             .join(installation.installation_type.hook_dll_name());
-        let hook_dll = include_bytes!(env!("CARGO_CDYLIB_FILE_HOOK_hook"));
+        let hook_dll = include_bytes!(env!("HOOK_DLL_PATH"));
         if path_hook_dll
             .metadata()
             .map(|m| m.len() != hook_dll.len() as u64)
