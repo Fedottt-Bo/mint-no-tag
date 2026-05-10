@@ -19,7 +19,7 @@ fs-err = "3.3.0"
 itertools = "0.14.0"
 patternsleuth = { git = "https://github.com/trumank/patternsleuth", rev = "5786164" }
 postcard = { version = "1.1.3", default-features = false, features = ["alloc"] }
-repak = { git = "https://github.com/trumank/repak", rev = "355b5f6" }
+repak = { git = "https://github.com/Fedottt-Bo/ue_repak", rev = "c502491" }
 reqwest = { version = "0.11.27", default-features = false, features = ["blocking", "rustls", "json"] }
 serde = { version = "1.0.219", features = ["derive"] }
 serde_json = "1.0.149"

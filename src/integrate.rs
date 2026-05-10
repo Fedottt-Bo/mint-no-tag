@@ -558,6 +558,7 @@ impl<W: Write + Seek> ModBundleWriter<W> {
         Ok(Self {
             pak_writer: repak::PakBuilder::new()
                 .compression([repak::Compression::Zlib])
+                .compression_effort(repak::CompressionEffort::Best)
                 .writer(writer, repak::Version::V11, "../../../".to_string(), None),
             directories,
         })
