@@ -10,7 +10,7 @@ members = [
 repository = "https://github.com/Fedottt-Bo/mint-no-tag"
 authors = ["trumank", "jieyouxu", "Fedottt-Bo"]
 license = "MIT OR Apache-2.0"
-version = "1.2.1"
+version = "1.2.2"
 edition = "2024"
 
 [workspace.dependencies]
