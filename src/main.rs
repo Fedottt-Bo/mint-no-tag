@@ -13,6 +13,11 @@ use mint::{
 };
 use mint::{gui::gui, providers::ModSpecification, state::State};
 
+use mimalloc::MiMalloc;
+
+#[global_allocator]
+static GLOBAL: MiMalloc = MiMalloc;
+
 /// Command line integration tool.
 #[derive(Parser, Debug)]
 struct ActionIntegrate {
