@@ -51,6 +51,7 @@ ansi_term = "0.12.1"
 anyhow.workspace = true
 async-trait = "0.1.89"
 clap = { version = "4.6.0", features = ["derive"] }
+ctor = { version = "1.0.7" }
 dialoguer = "0.11.0"
 directories = "6.0.0"
 eframe = "0.31.1"
@@ -66,6 +67,7 @@ indexmap = { version = "2.13.1", features = ["serde"] }
 inventory = "0.3.24"
 itertools.workspace = true
 mimalloc = { version = "*", default-features = false, features = [] }
+libmimalloc-sys = { version = "*", default-features = false, features = ["extended"] }
 mint_lib = { path = "mint_lib" }
 modio = { git = "https://github.com/trumank/modio-rs.git", rev = "d979c0a", default-features = false, features = ["rustls-tls"] }
 obake = { version = "1.0.5", features = ["serde"] }

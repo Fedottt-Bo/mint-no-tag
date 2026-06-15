@@ -14,9 +14,20 @@ use mint::{
 use mint::{gui::gui, providers::ModSpecification, state::State};
 
 use mimalloc::MiMalloc;
+use ctor::ctor;
 
 #[global_allocator]
 static GLOBAL: MiMalloc = MiMalloc;
+
+#[ctor]
+unsafe fn init_mimalloc() {
+    use libmimalloc_sys::*;
+
+    unsafe {
+        mi_option_set(mi_option_large_os_pages, 1);
+        mi_option_set(/*mi_option_eager_commit*/ 3, 1);
+    }
+}
 
 /// Command line integration tool.
 #[derive(Parser, Debug)]
