@@ -23,7 +23,6 @@ repak.workspace = true
 retour = { git = "https://github.com/Hpmason/retour-rs", features = ["static-detour"] }
 serde.workspace = true
 serde_json.workspace = true
-tokio = { workspace = true, features = ["full"] }
 tracing-appender = "0.2.3"
 tracing.workspace = true
 widestring = "1.2.0"

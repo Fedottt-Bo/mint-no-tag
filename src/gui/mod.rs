@@ -1022,7 +1022,7 @@ impl App {
                             0.0,
                             TextFormat {
                                 color: ui.visuals().text_color(),
-                                underline: Stroke::new(1.0, ui.visuals().text_color()),
+                                underline: Stroke::new(1.0_f32, ui.visuals().text_color()),
                                 ..Default::default()
                             },
                         );
